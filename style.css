@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --remove-visibility: hidden;
+}
+
+body {
+    font-family: "Almendra";
+    background-image: url(img/library.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+header p {
+    font-size: 5rem;
+    color: rgb(63, 0, 63);
+    font-weight: bold;
+    margin-top: 30px;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+header hr {
+    background-color: rgb(53, 0, 53);
+    border: none;
+    height: 10px;
+    width: 750px;
+}
+
+@keyframes example {
+    0% {transform: translate(0, 0px)}
+    25% {transform: translate(0, -10px)}
+    50% {transform: translate(0, -5px)}
+    100% {transform: translate(0, 0px)}
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+
+
+.addBookButton {
+    border: none;
+    height: 125px;
+    width: 125px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 50%;
+    opacity: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.addBookButton div {
+    width: 50px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+}
+
+.addBookButton div:nth-child(2) {
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+}
+
+.libraryContainer {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-auto-rows: 325px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    margin-top: 50px;
+    padding-bottom: 200px;
+}
+
+.book {
+    background-color: #8E4949;
+    border-left: 20px solid #EAEAEA;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    height: 325px;
+    width: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 175px;
+    grid-template-rows: 100px 120px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bookInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    word-break: break-word;
+}
+
+.book:hover {
+    --remove-visibility: visibile;
+}
+
+
+.removeButton {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 30%;
+    justify-self: flex-end;
+    border: none;
+    height: 50px;
+    width: 50px;
+    visibility: var(--remove-visibility);
+    cursor: pointer;
+}
+
+.removeButton div {
+    margin: 0 auto;
+    width: 20px;
+    height: 5px;
+    background-color: red;
+}
+
+.removeButton:hover {
+    
+    filter: brightness(0.9);
+}
+
+.hasReadButton {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.hasReadClass {
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+    gap: 2px;
+}
+
+#favDialog {
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+label {
+    margin-top: 5px;
+}
+
+.formButtons {
+}
+
+.formButtons button {
+    border: none;
+    height: 20px;
+    width: 100px;
+    background-color: rgb(59, 0, 28);
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+::backdrop {
+    background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0),
+      rgb(70, 4, 87)
+    );
+    opacity: 0.75;
+  }
