@@ -59,15 +59,14 @@ header hr {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(216, 215, 216, 0.3);
     width: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    padding-bottom: 200px;
+    padding: 0px 50px 100px 50px;
 }
-
 
 .addBookButton {
     border: none;
@@ -114,8 +113,8 @@ header hr {
 .book {
     background-color: #8E4949;
     border-left: 20px solid #EAEAEA;
-    border-top: 4px solid black;
-    border-right: 4px solid black;
+    border-top: 4px solid rgb(0, 0, 0);
+    border-right: 4px solid rgb(0, 0, 0);
     height: 325px;
     width: 250px;
     padding: 20px;
@@ -175,7 +174,7 @@ header hr {
     margin-top: 50px;
 }
 
-form {
+#favDialog form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,18 +186,16 @@ form {
     margin: 0 auto;
     margin-top: auto;
     margin-bottom: auto;
+    border-radius: 12px;
 }
 
 label {
     margin-top: 5px;
 }
 
-.formButtons {
-}
-
 .formButtons button {
     border: none;
-    height: 20px;
+    height: 30px;
     width: 100px;
     background-color: rgb(59, 0, 28);
     margin-top: 20px;

@@ -94,6 +94,7 @@ function displayBooksPage() {
         hasReadButton.addEventListener('click', () => {
             myLibrary[i].hasReadBook();
         });
+
     }
 }
 
@@ -149,6 +150,8 @@ confirmBtn.addEventListener("click", (event) => {
 
         displayBooksPage();
 
+        
+        form.reset();
         favDialog.close();
     }
 
